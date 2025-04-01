@@ -79,13 +79,6 @@ The project includes comprehensive Exploratory Data Analysis (EDA) notebooks tha
 
 We welcome contributions! Please feel free to submit a Pull Request.
 
-
-## 🙏 Acknowledgments
-
-- Recipe dataset providers
-- Contributors and maintainers
-- Open-source community
-
 ---
 
 Made with ❤️ for better cooking experiences
