@@ -1,46 +1,91 @@
-<img src='https://github.com/kavyajeetbora/recipe_recommender/blob/22d2834d70d2fe6b40b77e6559221c6028edf12b/images/logo-no-background.png' height=200/>
+# 🍳 Recipe Personalization Model
 
-## Food Recipe Recommender
+A smart recipe recommendation system that personalizes recipe suggestions based on user preferences, dietary restrictions, and fitness goals.
 
-### What is it ?
+## 🌟 Features
 
-An item based recommender system for food recipes based on their ingredients
+- **Personalized Recommendations**: Get recipe suggestions based on your:
+  - Dietary preferences and restrictions
+  - Fitness goals (weight loss, muscle gain, maintenance)
+  - Cooking time preferences
+  - Calorie targets
+  - Meal history and ratings
 
-### Demo
+- **Nutritional Tracking**:
+  - Detailed macronutrient breakdown
+  - Calorie tracking
+  - Sugar content monitoring (especially for diabetic users)
+  - Portion size recommendations
 
-![demo1](https://github.com/kavyajeetbora/recipe_recommender/assets/38955297/19a0da9c-2b88-4c84-9b91-4321f2397ed9)
+- **User-Friendly Interface**:
+  - Interactive Streamlit dashboard
+  - Beautiful recipe cards
+  - Step-by-step cooking instructions
+  - Ingredient lists
+  - Nutritional visualizations
 
-### What data it is based on ?
+## 🚀 Getting Started
 
-It is based on the public data available on kaggle: [Raw Recipes](https://www.kaggle.com/code/aayushmishra1512/food-recommender/input?select=RAW_recipes.csv)
+### Prerequisites
+- Python 3.8+
+- pip (Python package manager)
 
-### How the item based recommendation system works ?
+### Installation
 
-#### step 1.
+1. Clone the repository:
+```bash
+git clone https://github.com/Recipe-Rise/Model_Desgin.git
+cd Model_Desgin
+```
 
-The ingredients are first embedded using AI models which are in sentence form. In NLP, sentence embedding refers to a numeric representation of a sentence in the form of a vector of real numbers, which encodes meaningful semantic information
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-![](https://miro.medium.com/v2/resize:fit:828/format:webp/1*ytRLNPOlDQ7kV6XhwH4baA.png)
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-##### 1.1 what model is used for embedding the sentences ?
+4. Run the application:
+```bash
+streamlit run app.py
+```
 
-[MiniLM: Small and Fast Pre-trained Models for Language Understanding and Generation](https://huggingface.co/microsoft/MiniLM-L12-H384-uncased)
+## 🛠️ Project Structure
 
-More models on this [link](https://www.sbert.net/docs/pretrained_models.html#model-overview)
+```
+Model_Desgin/
+├── app.py              # Main Streamlit application
+├── utils.py            # Utility functions and helper methods
+├── style.css           # Custom styling for the web interface
+├── requirements.txt    # Python dependencies
+├── data/              # Recipe dataset
+├── images/            # Application images and assets
+└── notebooks/         # Jupyter notebooks for analysis
+```
 
-2. After the ingredients are embedded (in vector form), the cosine similarity is calculated between the user search query and rest of the recipes. Basically finding the angle between two vectors, lesser the angle more similar they are and vice versa
+## 📊 Data Analysis
 
-![](https://storage.googleapis.com/lds-media/images/cosine-similarity-vectors.original.jpg)
+The project includes comprehensive Exploratory Data Analysis (EDA) notebooks that cover:
+- Recipe feature analysis
+- Nutritional content analysis
+- Ingredient pattern analysis
+- Cooking time and complexity metrics
 
-### App is deployed on streamlit
+## 🤝 Contributing
 
-The app is deployed on streamlit server
+We welcome contributions! Please feel free to submit a Pull Request.
 
-[Run the app](https://kavyajeetbora-recipe-recommender-app-bo2dv0.streamlit.app/)
 
-### Medium article
-[Medium article: Step by step guide on how to develop this application](https://medium.com/@kavyajeetbora/create-a-food-recipe-recommender-application-using-sentence-transformer-model-and-streamlit-aea2141a4599)
+## 🙏 Acknowledgments
 
-### TODO
+- Recipe dataset providers
+- Contributors and maintainers
+- Open-source community
 
-- ~Show the nutrition values~
+---
+
+Made with ❤️ for better cooking experiences
